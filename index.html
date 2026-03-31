@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Level AI: Supercharge for ELT Professionals — Pre-Workshop Survey</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700;8..60,800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F6F5F1;
+  --surface: #FFFFFF;
+  --surface-alt: #F0EFEB;
+  --border: #DDD9D0;
+  --border-focus: #5B4EC4;
+  --text: #1C1917;
+  --text-secondary: #57534E;
+  --text-muted: #8C877D;
+  --accent: #5B4EC4;
+  --accent-light: #7C6FE0;
+  --accent-pale: #EDE9FF;
+  --accent-dim: rgba(91,78,196,.08);
+  --teal: #0D9488;
+  --teal-pale: #E6FAF7;
+  --coral: #DC4A3F;
+  --coral-pale: #FFF1F0;
+  --gold: #B8860B;
+  --gold-pale: #FFF8E7;
+  --success: #166534;
+  --success-pale: #DCFCE7;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.04);
+  --shadow-lg: 0 4px 24px rgba(0,0,0,.08);
+}
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body {
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  min-height:100vh;
+  font-size:17px;
+}
+
+/* ── HEADER ── */
+.header {
+  background:linear-gradient(135deg,#1a1040 0%,#0f1230 50%,#0a1a2a 100%);
+  color:#fff;
+  position:sticky;top:0;z-index:100;
+  box-shadow:0 2px 20px rgba(0,0,0,.25);
+}
+.header-inner {
+  max-width:800px;margin:0 auto;
+  padding:18px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.header-brand {
+  display:flex;flex-direction:column;gap:2px;
+}
+.header-label {
+  font-size:11px;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(162,155,254,.8);font-weight:600;
+}
+.header-title {
+  font-family:'Source Serif 4',serif;
+  font-size:20px;font-weight:700;line-height:1.25;
+}
+.header-right {
+  text-align:right;
+}
+.header-right .lang-tag {
+  font-size:11px;background:rgba(255,255,255,.1);
+  padding:4px 10px;border-radius:20px;color:rgba(255,255,255,.7);
+  font-weight:500;
+}
+
+/* ── PROGRESS ── */
+.progress-bar {
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  padding:14px 28px;
+  position:sticky;top:60px;z-index:90;
+}
+.progress-inner {
+  max-width:800px;margin:0 auto;
+  display:flex;align-items:center;gap:16px;
+}
+.prog-track {
+  flex:1;height:8px;background:var(--surface-alt);
+  border-radius:4px;overflow:hidden;
+}
+.prog-fill {
+  height:100%;width:0%;
+  background:linear-gradient(90deg,var(--accent),var(--accent-light));
+  border-radius:4px;
+  transition:width .5s cubic-bezier(.22,1,.36,1);
+}
+.prog-label {
+  font-size:13px;font-weight:600;color:var(--text-secondary);
+  white-space:nowrap;min-width:110px;text-align:right;
+}
+
+/* ── MAIN CONTAINER ── */
+.container { max-width:800px;margin:0 auto;padding:28px 24px 60px; }
+
+/* ── PAGES ── */
+.page { display:none; }
+.page.active { display:block;animation:fadeIn .4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── SECTION CARDS ── */
+.section-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px 30px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow);
+}
+.section-header {
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:8px;
+}
+.section-icon {
+  width:40px;height:40px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+}
+.section-title {
+  font-family:'Source Serif 4',serif;
+  font-size:22px;font-weight:700;color:var(--text);
+  line-height:1.3;
+}
+.section-desc {
+  font-size:15px;color:var(--text-secondary);
+  margin-bottom:24px;line-height:1.6;
+  margin-left:52px;
+}
+
+/* ── FORM ELEMENTS ── */
+.q-group { margin-bottom:26px; }
+.q-group:last-child { margin-bottom:0; }
+.q-label {
+  display:block;
+  font-size:16px;font-weight:600;color:var(--text);
+  margin-bottom:8px;line-height:1.5;
+}
+.q-label .req { color:var(--coral);margin-left:3px; }
+.q-hint {
+  font-size:14px;color:var(--text-muted);
+  margin-top:-4px;margin-bottom:10px;line-height:1.5;
+}
+
+input[type="text"],input[type="email"],input[type="number"],textarea,select {
+  width:100%;
+  font-family:'DM Sans',sans-serif;
+  font-size:16px;
+  padding:13px 16px;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  background:var(--surface);
+  color:var(--text);
+  transition:border-color .2s,box-shadow .2s;
+  line-height:1.5;
+}
+input:focus,textarea:focus,select:focus {
+  outline:none;
+  border-color:var(--border-focus);
+  box-shadow:0 0 0 3px var(--accent-pale);
+}
+textarea { min-height:90px;resize:vertical; }
+select { cursor:pointer;appearance:auto; }
+
+/* Radio & Checkbox */
+.option-group { display:flex;flex-direction:column;gap:8px; }
+.option-item {
+  display:flex;align-items:flex-start;gap:12px;
+  padding:12px 16px;
+  border:1.5px solid var(--border);
+  border-radius:var(--radius-sm);
+  cursor:pointer;
+  transition:all .2s;
+  font-size:16px;line-height:1.5;
+}
+.option-item:hover { border-color:var(--accent);background:var(--accent-dim); }
+.option-item.selected { border-color:var(--accent);background:var(--accent-pale); }
+.option-item input[type="radio"],
+.option-item input[type="checkbox"] {
+  width:20px;height:20px;margin-top:2px;flex-shrink:0;
+  accent-color:var(--accent);cursor:pointer;
+}
+
+/* Likert Scale */
+.likert-table {
+  width:100%;border-collapse:separate;border-spacing:0;
+  font-size:15px;
+  border:1px solid var(--border);
+  border-radius:var(--radius-sm);
+  overflow:hidden;
+}
+.likert-table thead th {
+  background:var(--surface-alt);
+  padding:12px 8px;
+  font-weight:600;font-size:13px;
+  color:var(--text-secondary);
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.likert-table thead th:first-child { text-align:left;padding-left:16px;min-width:200px; }
+.likert-table tbody td {
+  padding:14px 8px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
+.likert-table tbody td:first-child {
+  text-align:left;padding-left:16px;
+  font-weight:500;font-size:15px;line-height:1.45;
+}
+.likert-table tbody tr:last-child td { border-bottom:none; }
+.likert-table tbody tr:hover { background:var(--accent-dim); }
+.likert-table input[type="radio"] {
+  width:20px;height:20px;accent-color:var(--accent);cursor:pointer;
+}
+
+/* Grid for tool checkboxes */
+.tool-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:8px;
+}
+.tool-grid .option-item { padding:10px 14px;font-size:15px; }
+
+/* ── NAVIGATION ── */
+.nav-bar {
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:28px;padding-top:20px;
+  border-top:1px solid var(--border);
+}
+.btn {
+  font-family:'DM Sans',sans-serif;
+  font-size:16px;font-weight:600;
+  padding:13px 32px;
+  border-radius:var(--radius-sm);
+  border:none;cursor:pointer;
+  transition:all .2s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary {
+  background:var(--accent);color:#fff;
+  box-shadow:0 2px 8px rgba(91,78,196,.25);
+}
+.btn-primary:hover { background:var(--accent-light);transform:translateY(-1px); }
+.btn-secondary {
+  background:var(--surface);color:var(--text-secondary);
+  border:1.5px solid var(--border);
+}
+.btn-secondary:hover { border-color:var(--accent);color:var(--accent); }
+.btn-submit {
+  background:var(--teal);color:#fff;
+  box-shadow:0 2px 8px rgba(13,148,136,.25);
+}
+.btn-submit:hover { background:#0F766E; }
+
+/* ── ERROR ── */
+.error-msg {
+  font-size:14px;color:var(--coral);font-weight:500;
+  margin-top:6px;display:none;
+}
+.error-msg.show { display:block; }
+.q-group.has-error input,
+.q-group.has-error textarea,
+.q-group.has-error select { border-color:var(--coral); }
+
+/* ── CONSENT BOX ── */
+.consent-box {
+  background:var(--gold-pale);
+  border:1px solid #E8D5A0;
+  border-radius:var(--radius-sm);
+  padding:18px 20px;
+  font-size:14px;color:#6B5900;
+  line-height:1.65;
+  margin-bottom:24px;
+}
+.consent-box strong { color:#8B6D00; }
+
+/* ── INTRO CARD ── */
+.intro-card {
+  background:linear-gradient(135deg,#1a1040,#0f1230);
+  color:#fff;border-radius:var(--radius);
+  padding:36px 32px;margin-bottom:20px;
+  box-shadow:var(--shadow-lg);
+  position:relative;overflow:hidden;
+}
+.intro-card::before {
+  content:'';position:absolute;top:-40%;right:-15%;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(91,78,196,.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+.intro-card h2 {
+  font-family:'Source Serif 4',serif;
+  font-size:26px;font-weight:800;margin-bottom:12px;line-height:1.3;
+}
+.intro-card p {
+  font-size:16px;line-height:1.7;color:rgba(255,255,255,.8);
+  max-width:680px;
+}
+.intro-card .highlight { color:#a29bfe;font-weight:600; }
+
+/* ── SUCCESS ── */
+.success-page {
+  text-align:center;padding:60px 20px;
+}
+.success-icon {
+  width:80px;height:80px;border-radius:50%;
+  background:var(--success-pale);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;font-size:36px;
+}
+.success-page h2 {
+  font-family:'Source Serif 4',serif;
+  font-size:28px;font-weight:700;margin-bottom:10px;
+}
+.success-page p { font-size:16px;color:var(--text-secondary);max-width:480px;margin:0 auto; }
+
+/* ── SUBMITTING OVERLAY ── */
+.overlay {
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.45);
+  z-index:999;align-items:center;justify-content:center;
+}
+.overlay.show { display:flex; }
+.overlay-box {
+  background:#fff;border-radius:var(--radius);
+  padding:40px 48px;text-align:center;
+  box-shadow:var(--shadow-lg);
+}
+.spinner {
+  width:40px;height:40px;border:4px solid var(--border);
+  border-top-color:var(--accent);border-radius:50%;
+  animation:spin .8s linear infinite;margin:0 auto 16px;
+}
+@keyframes spin { to{transform:rotate(360deg)} }
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  body { font-size:16px; }
+  .section-card { padding:24px 20px; }
+  .intro-card { padding:28px 22px; }
+  .header-inner { padding:14px 18px; }
+  .container { padding:20px 14px 40px; }
+  .tool-grid { grid-template-columns:1fr; }
+  .likert-table thead th:first-child { min-width:140px; }
+  .section-desc { margin-left:0; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="header-label">Pre-Workshop Survey</div>
+      <div class="header-title">Next Level AI: Supercharge for ELT Professionals</div>
+    </div>
+    <div class="header-right">
+      <span class="lang-tag">EN / TH</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar">
+  <div class="progress-inner">
+    <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+    <div class="prog-label" id="progLabel">Section 1 / 7</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+<!-- ═══════════════ PAGE 1: WELCOME + DEMOGRAPHICS ═══════════════ -->
+<div class="page active" id="p-1">
+
+  <div class="intro-card">
+    <h2>Welcome! ยินดีต้อนรับ</h2>
+    <p>Thank you for registering for the <span class="highlight">Next Level AI: Supercharge for ELT Professionals</span> online workshop. This survey will help us tailor the workshop content to your specific needs, interests, and experience level. Your responses are confidential and will be used solely for workshop planning purposes.</p>
+    <p style="margin-top:12px;font-size:14px;color:rgba(255,255,255,.55)">⏱ Estimated time: 12–15 minutes &nbsp;|&nbsp; All fields marked <span style="color:#ff7675">*</span> are required</p>
+  </div>
+
+  <div class="consent-box">
+    <strong>Privacy Notice / ข้อความเกี่ยวกับความเป็นส่วนตัว:</strong> Your participation is entirely voluntary. All responses will be anonymised in any reporting. Personal information (name, email) is collected solely for workshop coordination and will not be shared with third parties.
+  </div>
+
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--accent-pale);color:var(--accent);">👤</div>
+      <div class="section-title">Section 1: Personal & Professional Profile</div>
+    </div>
+    <div class="section-desc">ข้อมูลส่วนตัวและข้อมูลเชิงวิชาชีพ</div>
+
+    <!-- Q1 -->
+    <div class="q-group" id="g-name">
+      <label class="q-label">1. Full Name (ชื่อ-นามสกุล)<span class="req">*</span></label>
+      <input type="text" id="q-name" placeholder="e.g., Dr. Somchai Prasert">
+      <div class="error-msg" id="e-name">Please enter your name.</div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q-group" id="g-email">
+      <label class="q-label">2. Email Address (อีเมล)<span class="req">*</span></label>
+      <input type="email" id="q-email" placeholder="your active email address">
+      <div class="error-msg" id="e-email">Please enter a valid email.</div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q-group" id="g-institution">
+      <label class="q-label">3. Institution / Organisation (สังกัด/สถาบัน)<span class="req">*</span></label>
+      <input type="text" id="q-institution" placeholder="e.g., Mahidol University">
+      <div class="error-msg" id="e-institution">Please enter your institution.</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q-group" id="g-role">
+      <label class="q-label">4. Current Professional Role (ตำแหน่งปัจจุบัน)<span class="req">*</span></label>
+      <div class="option-group" id="q-role">
+        <label class="option-item"><input type="radio" name="role" value="University lecturer / professor"> University Lecturer / Professor (อาจารย์มหาวิทยาลัย)</label>
+        <label class="option-item"><input type="radio" name="role" value="K-12 school teacher"> K-12 School Teacher (ครูโรงเรียน)</label>
+        <label class="option-item"><input type="radio" name="role" value="Graduate student"> Graduate Student (นักศึกษาระดับบัณฑิตศึกษา)</label>
+        <label class="option-item"><input type="radio" name="role" value="Independent tutor / freelance educator"> Independent Tutor / Freelance Educator (ติวเตอร์/ผู้สอนอิสระ)</label>
+        <label class="option-item"><input type="radio" name="role" value="Curriculum developer / instructional designer"> Curriculum Developer / Instructional Designer (นักพัฒนาหลักสูตร)</label>
+        <label class="option-item"><input type="radio" name="role" value="Educational media / publishing"> Educational Media / Publishing (สื่อการศึกษา/สำนักพิมพ์)</label>
+        <label class="option-item"><input type="radio" name="role" value="Other"> Other (อื่นๆ — please specify below)</label>
+      </div>
+      <input type="text" id="q-role-other" placeholder="If 'Other', please specify..." style="margin-top:8px;display:none;">
+      <div class="error-msg" id="e-role">Please select your role.</div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q-group" id="g-education">
+      <label class="q-label">5. Highest Education Level (วุฒิการศึกษาสูงสุด)<span class="req">*</span></label>
+      <div class="option-group" id="q-education">
+        <label class="option-item"><input type="radio" name="education" value="Bachelor's degree"> Bachelor's Degree (ปริญญาตรี)</label>
+        <label class="option-item"><input type="radio" name="education" value="Master's degree"> Master's Degree (ปริญญาโท)</label>
+        <label class="option-item"><input type="radio" name="education" value="Doctoral degree"> Doctoral Degree (ปริญญาเอก)</label>
+        <label class="option-item"><input type="radio" name="education" value="Other"> Other (อื่นๆ)</label>
+      </div>
+      <div class="error-msg" id="e-education">Please select your education level.</div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q-group">
+      <label class="q-label">6. Years of English Teaching Experience (ประสบการณ์สอนภาษาอังกฤษ)<span class="req">*</span></label>
+      <select id="q-exp">
+        <option value="">— Select / เลือก —</option>
+        <option value="0-2">0–2 years</option>
+        <option value="3-5">3–5 years</option>
+        <option value="6-10">6–10 years</option>
+        <option value="11-15">11–15 years</option>
+        <option value="16-20">16–20 years</option>
+        <option value="20+">More than 20 years</option>
+      </select>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q-group">
+      <label class="q-label">7. Primary Learner Level You Teach (ระดับผู้เรียนหลักที่สอน)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="option-group" id="q-learner-level">
+        <label class="option-item"><input type="checkbox" name="learner_level" value="Primary (Pratom)"> Primary / ประถมศึกษา</label>
+        <label class="option-item"><input type="checkbox" name="learner_level" value="Secondary (Matthayom)"> Secondary / มัธยมศึกษา</label>
+        <label class="option-item"><input type="checkbox" name="learner_level" value="Undergraduate"> Undergraduate / ปริญญาตรี</label>
+        <label class="option-item"><input type="checkbox" name="learner_level" value="Graduate"> Graduate / บัณฑิตศึกษา</label>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q-group">
+      <label class="q-label">8. English Skill Areas You Primarily Teach (ทักษะหลักที่สอน)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="tool-grid" id="q-skills">
+        <label class="option-item"><input type="checkbox" name="skill" value="Listening"> Listening</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Speaking"> Speaking</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Reading"> Reading</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Writing"> Writing</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Grammar"> Grammar</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Vocabulary"> Vocabulary</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Pronunciation"> Pronunciation</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Integrated skills"> Integrated Skills</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="ESP/EAP"> ESP / EAP</label>
+        <label class="option-item"><input type="checkbox" name="skill" value="Translation"> Translation</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <div></div>
+    <button class="btn btn-primary" onclick="goPage(2)">Next: Learning Profile →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 2: PSYCHOGRAPHICS & LEARNING STYLE ═══════════════ -->
+<div class="page" id="p-2">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--teal-pale);color:var(--teal);">🧠</div>
+      <div class="section-title">Section 2: Learning Profile & Psychographics</div>
+    </div>
+    <div class="section-desc">รูปแบบการเรียนรู้และแรงจูงใจเชิงวิชาชีพ</div>
+
+    <!-- Q9 -->
+    <div class="q-group">
+      <label class="q-label">9. What best describes your preferred learning style in a workshop setting? (รูปแบบการเรียนรู้ที่ชอบ)<span class="req">*</span></label>
+      <div class="q-hint">Select up to 2 / เลือกได้สูงสุด 2 ข้อ</div>
+      <div class="option-group" id="q-learn-style">
+        <label class="option-item"><input type="checkbox" name="learn_style" value="Hands-on practice (learning by doing)"> Hands-on Practice — I learn best by doing and experimenting (เรียนรู้จากการลงมือทำ)</label>
+        <label class="option-item"><input type="checkbox" name="learn_style" value="Demonstration and observation"> Demonstration & Observation — I learn by watching experts model the process (เรียนรู้จากการดูตัวอย่าง)</label>
+        <label class="option-item"><input type="checkbox" name="learn_style" value="Lecture and explanation"> Lecture & Explanation — I prefer structured content delivery first (เรียนรู้จากการบรรยาย)</label>
+        <label class="option-item"><input type="checkbox" name="learn_style" value="Collaborative group work"> Collaborative Group Work — I learn best through peer interaction (เรียนรู้จากการทำงานกลุ่ม)</label>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q-group">
+      <label class="q-label">10. What is your PRIMARY motivation for attending this workshop? (แรงจูงใจหลัก)<span class="req">*</span></label>
+      <div class="option-group" id="q-motivation">
+        <label class="option-item"><input type="radio" name="motivation" value="Improve my teaching with AI"> Improve my teaching effectiveness with AI (พัฒนาการสอนด้วย AI)</label>
+        <label class="option-item"><input type="radio" name="motivation" value="Create AI-enhanced materials"> Learn to create AI-enhanced ELT materials (สร้างสื่อการสอนด้วย AI)</label>
+        <label class="option-item"><input type="radio" name="motivation" value="Stay current with AI trends"> Stay updated with AI trends in education (อัพเดทเทรนด์ AI)</label>
+        <label class="option-item"><input type="radio" name="motivation" value="Support research with AI"> Support my research work with AI tools (ใช้ AI สนับสนุนงานวิจัย)</label>
+        <label class="option-item"><input type="radio" name="motivation" value="Professional development / career advancement"> Professional development / career advancement (พัฒนาวิชาชีพ/ความก้าวหน้า)</label>
+        <label class="option-item"><input type="radio" name="motivation" value="Institutional requirement / networking"> Institutional requirement or professional networking (ตามนโยบายสถาบัน/สร้างเครือข่าย)</label>
+      </div>
+    </div>
+
+    <!-- Q11 -->
+    <div class="q-group">
+      <label class="q-label">11. How would you describe your attitude toward integrating AI in English language teaching? (ทัศนคติต่อ AI ในการสอนภาษาอังกฤษ)<span class="req">*</span></label>
+      <div class="option-group" id="q-attitude">
+        <label class="option-item"><input type="radio" name="attitude" value="Enthusiastic adopter"> 🚀 Enthusiastic Adopter — I actively seek and try new AI tools (ใช้ AI อย่างกระตือรือร้น)</label>
+        <label class="option-item"><input type="radio" name="attitude" value="Curious explorer"> 🔍 Curious Explorer — I'm interested but still finding my way (สนใจแต่ยังเรียนรู้อยู่)</label>
+        <label class="option-item"><input type="radio" name="attitude" value="Cautious observer"> ⚖️ Cautious Observer — I see potential but have concerns (เห็นประโยชน์แต่ยังมีข้อกังวล)</label>
+        <label class="option-item"><input type="radio" name="attitude" value="Skeptical/resistant"> 🤔 Skeptical — I'm not yet convinced AI belongs in ELT (ยังไม่แน่ใจว่า AI เหมาะกับ ELT)</label>
+      </div>
+    </div>
+
+    <!-- Q12 -->
+    <div class="q-group">
+      <label class="q-label">12. What are your biggest CONCERNS about using AI in ELT? (ข้อกังวลเกี่ยวกับ AI ในการสอน)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="option-group" id="q-concerns">
+        <label class="option-item"><input type="checkbox" name="concern" value="Academic integrity / cheating"> Academic integrity / student cheating (ความซื่อสัตย์ทางวิชาการ)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="Accuracy / hallucination"> AI accuracy / hallucination issues (ความถูกต้อง/ปัญหา hallucination)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="Data privacy"> Data privacy and security (ความเป็นส่วนตัวของข้อมูล)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="Over-reliance by students"> Students becoming over-reliant on AI (นักเรียนพึ่งพา AI มากเกินไป)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="Lack of training / confidence"> Lack of personal training or confidence (ขาดความรู้/ความมั่นใจ)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="Institutional policy unclear"> Unclear institutional policy on AI use (นโยบายสถาบันไม่ชัดเจน)</label>
+        <label class="option-item"><input type="checkbox" name="concern" value="No major concerns"> No major concerns (ไม่มีข้อกังวลสำคัญ)</label>
+      </div>
+    </div>
+
+    <!-- Q13 -->
+    <div class="q-group">
+      <label class="q-label">13. After this workshop, I want to be able to... (หลังอบรมเสร็จ ฉันอยากจะสามารถ...)</label>
+      <div class="q-hint">Select your TOP 3 goals / เลือก 3 เป้าหมายหลัก</div>
+      <div class="option-group" id="q-goals">
+        <label class="option-item"><input type="checkbox" name="goal" value="Design AI-enhanced ELT materials"> Design AI-enhanced ELT materials from scratch (ออกแบบสื่อ ELT ด้วย AI)</label>
+        <label class="option-item"><input type="checkbox" name="goal" value="Create interactive web-based materials"> Create interactive, web-based learning materials (สร้างสื่อเว็บแบบ interactive)</label>
+        <label class="option-item"><input type="checkbox" name="goal" value="Integrate AI into daily teaching"> Integrate AI tools into my daily teaching routine (ใช้ AI ในการสอนประจำวัน)</label>
+        <label class="option-item"><input type="checkbox" name="goal" value="Evaluate AI-generated content critically"> Evaluate and refine AI-generated content critically (ประเมิน AI content อย่างมีวิจารณญาณ)</label>
+        <label class="option-item"><input type="checkbox" name="goal" value="Use AI for research"> Use AI to support academic research (ใช้ AI สนับสนุนงานวิจัย)</label>
+        <label class="option-item"><input type="checkbox" name="goal" value="Build a professional AI toolkit"> Build a personal AI toolkit for ELT (สร้างชุดเครื่องมือ AI สำหรับ ELT)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(1)">← Back</button>
+    <button class="btn btn-primary" onclick="goPage(3)">Next: AI Experience →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 3: AI / GenAI TOOL PROFICIENCY ═══════════════ -->
+<div class="page" id="p-3">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--accent-pale);color:var(--accent);">🤖</div>
+      <div class="section-title">Section 3: AI & Generative AI Tool Experience</div>
+    </div>
+    <div class="section-desc">ประสบการณ์และระดับความชำนาญในการใช้เครื่องมือ AI</div>
+
+    <!-- Q14 -->
+    <div class="q-group">
+      <label class="q-label">14. How would you rate your OVERALL familiarity with AI/GenAI tools? (ระดับความคุ้นเคยกับ AI โดยรวม)<span class="req">*</span></label>
+      <div class="option-group" id="q-ai-level">
+        <label class="option-item"><input type="radio" name="ai_level" value="Beginner"> 🟢 Beginner — I've heard of AI tools but barely used them (เริ่มต้น — เคยได้ยินแต่แทบไม่ได้ใช้)</label>
+        <label class="option-item"><input type="radio" name="ai_level" value="Elementary"> 🔵 Elementary — I use ChatGPT or similar for simple tasks (ระดับต้น — ใช้ ChatGPT บ้าง)</label>
+        <label class="option-item"><input type="radio" name="ai_level" value="Intermediate"> 🟡 Intermediate — I regularly use AI tools for teaching and/or work (ระดับกลาง — ใช้ AI เป็นประจำ)</label>
+        <label class="option-item"><input type="radio" name="ai_level" value="Advanced"> 🟠 Advanced — I use multiple AI tools strategically and can write effective prompts (ระดับสูง — ใช้ AI หลายตัวอย่างมีกลยุทธ์)</label>
+        <label class="option-item"><input type="radio" name="ai_level" value="Expert"> 🔴 Expert — I build AI-powered tools, teach others, or conduct AI research (ผู้เชี่ยวชาญ — สร้าง AI tools/สอนคนอื่น)</label>
+      </div>
+    </div>
+
+    <!-- Q15 -->
+    <div class="q-group">
+      <label class="q-label">15. Which AI/GenAI tools have you USED (even once)? (เครื่องมือ AI ที่เคยใช้)<span class="req">*</span></label>
+      <div class="q-hint">Select all that apply / เลือกทั้งหมดที่เคยใช้</div>
+      <div class="tool-grid" id="q-ai-tools">
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="ChatGPT"> ChatGPT (OpenAI)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Claude AI"> Claude AI (Anthropic)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Gemini"> Gemini (Google)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Copilot"> Copilot (Microsoft)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Perplexity"> Perplexity AI</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="DeepSeek"> DeepSeek</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Grok"> Grok (xAI)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="NotebookLM"> NotebookLM (Google)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="MagicSchool.ai"> MagicSchool.ai</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Gamma.app"> Gamma.app</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Canva AI"> Canva AI / Magic Studio</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Midjourney / DALL-E / Ideogram"> Image AI (Midjourney / DALL-E / Ideogram)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Grammarly AI"> Grammarly AI</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="ElevenLabs / AI voice"> AI Voice Tools (ElevenLabs, etc.)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="Suno / Udio"> AI Music (Suno, Udio)</label>
+        <label class="option-item"><input type="checkbox" name="ai_tool" value="None"> I haven't used any AI tools yet (ยังไม่เคยใช้เลย)</label>
+      </div>
+    </div>
+
+    <!-- Q16 -->
+    <div class="q-group">
+      <label class="q-label">16. How do you currently use AI in your PROFESSIONAL work? (ใช้ AI ในงานอย่างไร)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="option-group" id="q-ai-use">
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Generating lesson content"> Generating lesson plans / teaching content (สร้างแผนการสอน/เนื้อหา)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Creating worksheets / quizzes"> Creating worksheets, quizzes, or tests (สร้างใบงาน/แบบทดสอบ)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Creating presentation slides"> Creating presentation slides (สร้างสไลด์)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Generating images / visuals"> Generating images or visual materials (สร้างรูปภาพ/สื่อภาพ)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Writing / editing / proofreading"> Writing, editing, or proofreading (เขียน/แก้ไข/ตรวจภาษา)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Research / literature review"> Research or literature review (ค้นคว้า/ทบทวนวรรณกรรม)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Translation"> Translation (แปลภาษา)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Providing student feedback"> Providing feedback to students (ให้ feedback นักเรียน)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Administrative tasks"> Administrative tasks (งานธุรการ/บริหาร)</label>
+        <label class="option-item"><input type="checkbox" name="ai_use" value="Not using AI professionally yet"> I'm not using AI in my professional work yet (ยังไม่ได้ใช้ AI ในงาน)</label>
+      </div>
+    </div>
+
+    <!-- Q17 -->
+    <div class="q-group">
+      <label class="q-label">17. Have you ever used Claude AI specifically? If yes, how? (เคยใช้ Claude AI หรือไม่)<span class="req">*</span></label>
+      <div class="option-group" id="q-claude-exp">
+        <label class="option-item"><input type="radio" name="claude_exp" value="Never heard of it"> Never heard of it (ไม่เคยได้ยิน)</label>
+        <label class="option-item"><input type="radio" name="claude_exp" value="Heard of it but never used"> Heard of it but never used (ได้ยินแต่ไม่เคยใช้)</label>
+        <label class="option-item"><input type="radio" name="claude_exp" value="Tried it a few times"> Tried it a few times for basic tasks (เคยลองใช้บ้าง)</label>
+        <label class="option-item"><input type="radio" name="claude_exp" value="Use it regularly"> Use it regularly for work (ใช้เป็นประจำ)</label>
+        <label class="option-item"><input type="radio" name="claude_exp" value="Power user / familiar with Artifacts"> Power user — familiar with Claude Artifacts (ใช้ขั้นสูง/คุ้นเคย Artifacts)</label>
+      </div>
+    </div>
+
+    <!-- Q18 -->
+    <div class="q-group">
+      <label class="q-label">18. How confident are you in writing effective AI prompts? (ความมั่นใจในการเขียน prompt)<span class="req">*</span></label>
+      <div class="option-group" id="q-prompt-conf">
+        <label class="option-item"><input type="radio" name="prompt_conf" value="Not confident"> 1 — Not confident at all (ไม่มั่นใจเลย)</label>
+        <label class="option-item"><input type="radio" name="prompt_conf" value="Slightly confident"> 2 — Slightly confident (มั่นใจเล็กน้อย)</label>
+        <label class="option-item"><input type="radio" name="prompt_conf" value="Moderately confident"> 3 — Moderately confident (มั่นใจปานกลาง)</label>
+        <label class="option-item"><input type="radio" name="prompt_conf" value="Confident"> 4 — Confident (มั่นใจ)</label>
+        <label class="option-item"><input type="radio" name="prompt_conf" value="Very confident"> 5 — Very confident (มั่นใจมาก)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(2)">← Back</button>
+    <button class="btn btn-primary" onclick="goPage(4)">Next: Web 2.0 & EdTech →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 4: WEB 2.0 & EDTECH TOOLS ═══════════════ -->
+<div class="page" id="p-4">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--gold-pale);color:var(--gold);">🌐</div>
+      <div class="section-title">Section 4: Web 2.0 & EdTech Tool Familiarity</div>
+    </div>
+    <div class="section-desc">ความคุ้นเคยกับเครื่องมือเว็บ 2.0 และเทคโนโลยีการศึกษา</div>
+
+    <!-- Q19 -->
+    <div class="q-group">
+      <label class="q-label">19. Rate your familiarity with the following EdTech / Web 2.0 tools:<span class="req">*</span></label>
+      <div class="q-hint">1 = Never heard of it / ไม่เคยได้ยิน &nbsp;→&nbsp; 4 = Use regularly / ใช้เป็นประจำ</div>
+      <div style="overflow-x:auto;">
+      <table class="likert-table">
+        <thead>
+          <tr>
+            <th>Tool / Platform</th>
+            <th>1<br><span style="font-weight:400;font-size:11px;">Never<br>heard</span></th>
+            <th>2<br><span style="font-weight:400;font-size:11px;">Heard<br>of it</span></th>
+            <th>3<br><span style="font-weight:400;font-size:11px;">Used<br>a few<br>times</span></th>
+            <th>4<br><span style="font-weight:400;font-size:11px;">Use<br>regularly</span></th>
+          </tr>
+        </thead>
+        <tbody id="likert-web20">
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- Q20 -->
+    <div class="q-group">
+      <label class="q-label">20. Which platforms do you currently use to CREATE learning materials? (แพลตฟอร์มที่ใช้สร้างสื่อ)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="tool-grid" id="q-create-tools">
+        <label class="option-item"><input type="checkbox" name="create_tool" value="PowerPoint / Google Slides"> PowerPoint / Google Slides</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Canva"> Canva</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Word / Google Docs"> Word / Google Docs</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Gamma.app"> Gamma.app</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Genially"> Genially</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Book Creator"> Book Creator</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="Video editing (CapCut, iMovie, etc.)"> Video editing (CapCut, etc.)</label>
+        <label class="option-item"><input type="checkbox" name="create_tool" value="No digital tools — paper-based only"> Paper-based only (ใช้กระดาษเท่านั้น)</label>
+      </div>
+    </div>
+
+    <!-- Q21 -->
+    <div class="q-group">
+      <label class="q-label">21. Have you ever created a web-based or interactive digital learning material? (เคยสร้างสื่อดิจิทัลแบบ interactive หรือไม่)<span class="req">*</span></label>
+      <div class="option-group" id="q-web-exp">
+        <label class="option-item"><input type="radio" name="web_exp" value="Never"> Never — I haven't tried (ไม่เคยเลย)</label>
+        <label class="option-item"><input type="radio" name="web_exp" value="Attempted but struggled"> Attempted but struggled (เคยลองแต่ยังทำไม่ได้)</label>
+        <label class="option-item"><input type="radio" name="web_exp" value="Created simple ones"> Created simple interactive materials (เคยสร้างแบบง่ายๆ)</label>
+        <label class="option-item"><input type="radio" name="web_exp" value="Regularly create"> I regularly create interactive/web-based materials (สร้างเป็นประจำ)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(3)">← Back</button>
+    <button class="btn btn-primary" onclick="goPage(5)">Next: Design Knowledge →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 5: UDL / UX-UI / MATERIALS DEVELOPMENT ═══════════════ -->
+<div class="page" id="p-5">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--coral-pale);color:var(--coral);">🎨</div>
+      <div class="section-title">Section 5: Design Knowledge & Materials Development</div>
+    </div>
+    <div class="section-desc">ความรู้ด้าน UDL, UX/UI Design และการพัฒนาสื่อการสอน</div>
+
+    <!-- Q22 -->
+    <div class="q-group">
+      <label class="q-label">22. Rate your current knowledge of the following concepts:<span class="req">*</span></label>
+      <div class="q-hint">1 = Never heard of it &nbsp;→&nbsp; 5 = Can explain & apply confidently</div>
+      <div style="overflow-x:auto;">
+      <table class="likert-table">
+        <thead>
+          <tr>
+            <th>Concept / Framework</th>
+            <th>1<br><span style="font-weight:400;font-size:11px;">Never<br>heard</span></th>
+            <th>2<br><span style="font-weight:400;font-size:11px;">Heard<br>the name</span></th>
+            <th>3<br><span style="font-weight:400;font-size:11px;">Basic<br>understanding</span></th>
+            <th>4<br><span style="font-weight:400;font-size:11px;">Can<br>explain</span></th>
+            <th>5<br><span style="font-weight:400;font-size:11px;">Explain<br>& apply</span></th>
+          </tr>
+        </thead>
+        <tbody id="likert-design">
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- Q23 -->
+    <div class="q-group">
+      <label class="q-label">23. When developing ELT materials, which of the following do you typically consider? (สิ่งที่คำนึงถึงเมื่อพัฒนาสื่อ)</label>
+      <div class="q-hint">Select all that apply / เลือกได้มากกว่า 1 ข้อ</div>
+      <div class="option-group" id="q-mat-consider">
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Learner diversity and accessibility"> Learner diversity and accessibility (ความหลากหลายและการเข้าถึงของผู้เรียน)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Visual design and layout"> Visual design and layout (การออกแบบภาพและเลย์เอาท์)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Interactivity and engagement"> Interactivity and engagement (ปฏิสัมพันธ์และความน่าสนใจ)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Alignment with learning objectives"> Alignment with learning objectives (สอดคล้องกับวัตถุประสงค์)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Mobile responsiveness"> Mobile-friendliness / responsive design (ใช้งานบนมือถือได้)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="Cognitive load management"> Cognitive load management (จัดการภาระทางปัญญา)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="User experience (ease of navigation)"> User experience / ease of navigation (ประสบการณ์ผู้ใช้/ใช้งานง่าย)</label>
+        <label class="option-item"><input type="checkbox" name="mat_consider" value="I haven't thought about these"> I haven't actively considered these aspects (ยังไม่เคยคิดถึงสิ่งเหล่านี้)</label>
+      </div>
+    </div>
+
+    <!-- Q24 -->
+    <div class="q-group">
+      <label class="q-label">24. What is your biggest CHALLENGE in developing ELT materials? (ความท้าทายหลักในการพัฒนาสื่อ)<span class="req">*</span></label>
+      <div class="q-hint">Select up to 3 / เลือกได้สูงสุด 3 ข้อ</div>
+      <div class="option-group" id="q-challenges">
+        <label class="option-item"><input type="checkbox" name="challenge" value="Time constraints"> Time constraints (ข้อจำกัดด้านเวลา)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Lack of design skills"> Lack of design skills (ขาดทักษะการออกแบบ)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Limited tech skills"> Limited technical skills (ทักษะเทคโนโลยีจำกัด)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Making materials engaging"> Making materials engaging and interactive (ทำให้สื่อน่าสนใจ)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Catering to diverse learners"> Catering to diverse learner needs (ตอบสนองผู้เรียนที่หลากหลาย)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Finding quality resources"> Finding high-quality source content (หาเนื้อหาที่มีคุณภาพ)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Budget constraints"> Budget constraints (ข้อจำกัดด้านงบประมาณ)</label>
+        <label class="option-item"><input type="checkbox" name="challenge" value="Institutional support"> Lack of institutional support (ขาดการสนับสนุนจากสถาบัน)</label>
+      </div>
+    </div>
+
+    <!-- Q25 -->
+    <div class="q-group">
+      <label class="q-label">25. What types of ELT materials would you MOST like to learn how to create with AI? (สื่อ ELT แบบไหนที่อยากเรียนสร้างด้วย AI)<span class="req">*</span></label>
+      <div class="q-hint">Select up to 3 / เลือกได้สูงสุด 3 ข้อ</div>
+      <div class="option-group" id="q-material-want">
+        <label class="option-item"><input type="checkbox" name="material_want" value="Interactive web-based activities"> Interactive web-based activities / games (กิจกรรมเว็บแบบ interactive)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Responsive digital worksheets"> Responsive digital worksheets (ใบงานดิจิทัลแบบ responsive)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Multimedia presentations"> Multimedia / AI-enhanced presentations (สื่อนำเสนอแบบมัลติมีเดีย)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Assessment / quiz platforms"> Assessment / quiz platforms (แพลตฟอร์มทดสอบ)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Reading scaffolds / levelled texts"> Reading scaffolds / levelled texts (สื่อช่วยอ่าน/ปรับระดับ)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Speaking / pronunciation practice tools"> Speaking / pronunciation practice tools (เครื่องมือฝึกพูด/ออกเสียง)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Gamified learning platforms"> Gamified learning platforms (แพลตฟอร์มเกมเพื่อการเรียนรู้)</label>
+        <label class="option-item"><input type="checkbox" name="material_want" value="Chatbot / conversational AI for learners"> Chatbot / conversational AI for students (แชทบอท AI สำหรับนักเรียน)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(4)">← Back</button>
+    <button class="btn btn-primary" onclick="goPage(6)">Next: Workshop Content →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 6: EXPECTED CONTENT & LOGISTICS ═══════════════ -->
+<div class="page" id="p-6">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--teal-pale);color:var(--teal);">📋</div>
+      <div class="section-title">Section 6: Workshop Content Expectations</div>
+    </div>
+    <div class="section-desc">เนื้อหาที่คาดหวังและความต้องการจากการอบรม</div>
+
+    <!-- Q26 -->
+    <div class="q-group">
+      <label class="q-label">26. How interested are you in the following workshop topics?<span class="req">*</span></label>
+      <div class="q-hint">1 = Not interested &nbsp;→&nbsp; 5 = Extremely interested</div>
+      <div style="overflow-x:auto;">
+      <table class="likert-table">
+        <thead>
+          <tr>
+            <th>Workshop Topic</th>
+            <th>1<br><span style="font-weight:400;font-size:11px;">Not<br>interested</span></th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5<br><span style="font-weight:400;font-size:11px;">Extremely<br>interested</span></th>
+          </tr>
+        </thead>
+        <tbody id="likert-topics">
+        </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- Q27 -->
+    <div class="q-group">
+      <label class="q-label">27. What is your preferred balance of theory vs. practice for this workshop? (สัดส่วนทฤษฎี vs. ปฏิบัติที่ต้องการ)<span class="req">*</span></label>
+      <div class="option-group" id="q-balance">
+        <label class="option-item"><input type="radio" name="balance" value="90% practice / 10% theory"> 90% Practice / 10% Theory (เน้นปฏิบัติเกือบทั้งหมด)</label>
+        <label class="option-item"><input type="radio" name="balance" value="70% practice / 30% theory"> 70% Practice / 30% Theory (เน้นปฏิบัติเป็นหลัก)</label>
+        <label class="option-item"><input type="radio" name="balance" value="50% practice / 50% theory"> 50% Practice / 50% Theory (เท่ากัน)</label>
+        <label class="option-item"><input type="radio" name="balance" value="30% practice / 70% theory"> 30% Practice / 70% Theory (เน้นทฤษฎีเป็นหลัก)</label>
+      </div>
+    </div>
+
+    <!-- Q28 -->
+    <div class="q-group">
+      <label class="q-label">28. What type of workshop output/takeaway would be MOST valuable to you? (ผลลัพธ์จากอบรมที่มีค่าที่สุด)<span class="req">*</span></label>
+      <div class="q-hint">Select your TOP 2 / เลือก 2 ข้อ</div>
+      <div class="option-group" id="q-takeaway">
+        <label class="option-item"><input type="checkbox" name="takeaway" value="A finished AI-enhanced material I created myself"> A finished AI-enhanced material I created myself (สื่อที่สร้างเองเสร็จ)</label>
+        <label class="option-item"><input type="checkbox" name="takeaway" value="Ready-to-use prompt templates"> Ready-to-use AI prompt templates for ELT (เทมเพลต prompt พร้อมใช้)</label>
+        <label class="option-item"><input type="checkbox" name="takeaway" value="Step-by-step tutorial / guide"> Step-by-step tutorial or guide I can revisit (คู่มือทีละขั้นตอน)</label>
+        <label class="option-item"><input type="checkbox" name="takeaway" value="A curated list of recommended AI tools"> A curated list of recommended AI tools (รายการเครื่องมือ AI แนะนำ)</label>
+        <label class="option-item"><input type="checkbox" name="takeaway" value="Professional network / community access"> Professional network or community access (เครือข่ายวิชาชีพ)</label>
+        <label class="option-item"><input type="checkbox" name="takeaway" value="Certificate of completion"> Certificate of completion (ใบประกาศนียบัตร)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(5)">← Back</button>
+    <button class="btn btn-primary" onclick="goPage(7)">Next: Final Thoughts →</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PAGE 7: OPEN-ENDED + SUBMIT ═══════════════ -->
+<div class="page" id="p-7">
+  <div class="section-card">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--accent-pale);color:var(--accent);">💬</div>
+      <div class="section-title">Section 7: Open Reflections</div>
+    </div>
+    <div class="section-desc">ข้อคิดเห็นและข้อเสนอแนะเพิ่มเติม</div>
+
+    <!-- Q29 -->
+    <div class="q-group">
+      <label class="q-label">29. What specific topic or skill do you hope this workshop will address that hasn't been covered in the questions above? (หัวข้อหรือทักษะเฉพาะที่ต้องการ)</label>
+      <textarea id="q-specific-topic" placeholder="Please share in English or Thai / กรุณาแชร์เป็นภาษาอังกฤษหรือไทย"></textarea>
+    </div>
+
+    <!-- Q30 -->
+    <div class="q-group">
+      <label class="q-label">30. Describe a SPECIFIC teaching challenge you currently face that you hope AI could help solve. (ปัญหาการสอนที่หวังว่า AI จะช่วยได้)</label>
+      <textarea id="q-teaching-challenge" placeholder="e.g., 'My students lose interest during reading activities...' / เช่น 'นักเรียนขาดความสนใจในกิจกรรมอ่าน...'"></textarea>
+    </div>
+
+    <!-- Q31 -->
+    <div class="q-group">
+      <label class="q-label">31. Is there anything else you'd like the workshop facilitator to know? (มีอะไรอื่นที่อยากให้วิทยากรทราบหรือไม่)</label>
+      <textarea id="q-anything-else" placeholder="Share any additional thoughts, needs, or accessibility requirements... / แชร์ความต้องการเพิ่มเติม เช่น ข้อจำกัดในการเข้าถึง..."></textarea>
+    </div>
+
+    <!-- Q32 -->
+    <div class="q-group">
+      <label class="q-label">32. Which device will you primarily use during the workshop? (อุปกรณ์หลักที่จะใช้ระหว่างอบรม)<span class="req">*</span></label>
+      <div class="option-group" id="q-device">
+        <label class="option-item"><input type="radio" name="device" value="Laptop / Desktop"> 💻 Laptop / Desktop</label>
+        <label class="option-item"><input type="radio" name="device" value="Tablet (iPad)"> 📱 Tablet (iPad)</label>
+        <label class="option-item"><input type="radio" name="device" value="Smartphone"> 📲 Smartphone only</label>
+        <label class="option-item"><input type="radio" name="device" value="Unsure"> Not sure yet (ยังไม่แน่ใจ)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bar">
+    <button class="btn btn-secondary" onclick="goPage(6)">← Back</button>
+    <button class="btn btn-submit" onclick="submitSurvey()">✓ Submit Survey / ส่งแบบสอบถาม</button>
+  </div>
+</div>
+
+
+<!-- ═══════════════ SUCCESS PAGE ═══════════════ -->
+<div class="page" id="p-success">
+  <div class="success-page">
+    <div class="success-icon">✅</div>
+    <h2>Thank You! ขอบคุณค่ะ/ครับ</h2>
+    <p>Your responses have been recorded successfully. Your input will directly shape the workshop content to ensure it meets your needs. We look forward to seeing you at the workshop!</p>
+    <p style="margin-top:16px;font-size:14px;color:var(--text-muted);">You may close this page now.</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<!-- SUBMITTING OVERLAY -->
+<div class="overlay" id="submittingOverlay">
+  <div class="overlay-box">
+    <div class="spinner"></div>
+    <div style="font-size:16px;font-weight:600;color:var(--text);">Submitting your responses...</div>
+    <div style="font-size:14px;color:var(--text-muted);margin-top:4px;">กำลังบันทึกข้อมูล...</div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════
+//  CONFIGURATION — Replace with your Apps Script URL
+// ══════════════════════════════════════════════════
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby4keDMkxlxPt37KcdMO6-qiYeKwaxOQw397aNLuJLsl28AeJSAE6bt5qT6PHHtegP6aw/exec';
+
+const TOTAL_PAGES = 7;
+let currentPage = 1;
+
+// ── HELPERS ──
+const $ = id => document.getElementById(id);
+const radio = name => { const r = document.querySelector(`input[name="${name}"]:checked`); return r ? r.value : ''; };
+const checks = name => [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(c=>c.value);
+
+// ── LIKERT TABLE BUILDERS ──
+function buildLikert(tbodyId, items, levels) {
+  const tbody = $(tbodyId);
+  items.forEach((item,i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${item}</td>` + levels.map((_,j) =>
+      `<td><input type="radio" name="${tbodyId}_${i}" value="${j+1}"></td>`
+    ).join('');
+    tbody.appendChild(tr);
+  });
+}
+
+// Web 2.0 tools (Q19)
+buildLikert('likert-web20', [
+  'Kahoot! / Quizizz',
+  'Padlet',
+  'Nearpod',
+  'Quizlet',
+  'Google Classroom',
+  'Mentimeter / Slido',
+  'Wordwall',
+  'Edpuzzle',
+  'Flip (formerly Flipgrid)',
+  'Genially',
+  'Loom / screen recording tools',
+  'LMS (Moodle, Canvas, Blackboard)',
+], [1,2,3,4]);
+
+// Design frameworks (Q22)
+buildLikert('likert-design', [
+  'Universal Design for Learning (UDL)',
+  'UX/UI Design principles',
+  'Responsive web design',
+  'Cognitive load theory',
+  'Bloom\'s Digital Taxonomy',
+  'Design Thinking in education',
+  'Prompt engineering for AI',
+], [1,2,3,4,5]);
+
+// Workshop topics (Q26)
+buildLikert('likert-topics', [
+  'AI literacy: Understanding the AI landscape for educators',
+  'Prompt engineering for ELT tasks',
+  'Using Claude AI & Claude Artifacts for materials creation',
+  'Applying UDL principles to AI-enhanced materials',
+  'Creating interactive, responsive web-based ELT materials',
+  'Creating gamified learning activities with AI',
+  'AI for assessment design & student feedback',
+  'Ethical AI use and academic integrity',
+  'AI tools for research support',
+], [1,2,3,4,5]);
+
+// ── OPTION ITEM SELECTION STYLING ──
+document.addEventListener('change', e => {
+  if (e.target.type === 'radio') {
+    const group = e.target.closest('.option-group');
+    if (group) {
+      group.querySelectorAll('.option-item').forEach(el => el.classList.remove('selected'));
+      e.target.closest('.option-item')?.classList.add('selected');
+    }
+  }
+  if (e.target.type === 'checkbox') {
+    const item = e.target.closest('.option-item');
+    if (item) item.classList.toggle('selected', e.target.checked);
+  }
+  // Show/hide "Other" field for role
+  if (e.target.name === 'role' && e.target.value === 'Other') {
+    $('q-role-other').style.display = 'block';
+  } else if (e.target.name === 'role') {
+    $('q-role-other').style.display = 'none';
+  }
+});
+
+// ── NAVIGATION ──
+function goPage(n) {
+  if (n < 1 || n > TOTAL_PAGES) return;
+  $(`p-${currentPage}`).classList.remove('active');
+  $(`p-${n}`).classList.add('active');
+  currentPage = n;
+  $('progFill').style.width = ((n / TOTAL_PAGES) * 100) + '%';
+  $('progLabel').textContent = `Section ${n} / ${TOTAL_PAGES}`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── COLLECT DATA ──
+function collectAll() {
+  const data = {};
+  // Page 1
+  data.name = $('q-name').value.trim();
+  data.email = $('q-email').value.trim();
+  data.institution = $('q-institution').value.trim();
+  data.role = radio('role');
+  data.role_other = $('q-role-other').value.trim();
+  data.education = radio('education');
+  data.experience = $('q-exp').value;
+  data.learner_levels = checks('learner_level');
+  data.skills_taught = checks('skill');
+  // Page 2
+  data.learning_style = checks('learn_style');
+  data.motivation = radio('motivation');
+  data.attitude = radio('attitude');
+  data.concerns = checks('concern');
+  data.goals = checks('goal');
+  // Page 3
+  data.ai_level = radio('ai_level');
+  data.ai_tools_used = checks('ai_tool');
+  data.ai_professional_use = checks('ai_use');
+  data.claude_experience = radio('claude_exp');
+  data.prompt_confidence = radio('prompt_conf');
+  // Page 4 — Likert
+  data.web20_familiarity = {};
+  document.querySelectorAll('#likert-web20 tr').forEach((tr,i) => {
+    const r = tr.querySelector('input:checked');
+    const label = tr.querySelector('td:first-child').textContent.trim();
+    data.web20_familiarity[label] = r ? r.value : '';
+  });
+  data.creation_tools = checks('create_tool');
+  data.web_material_exp = radio('web_exp');
+  // Page 5 — Likert + checks
+  data.design_knowledge = {};
+  document.querySelectorAll('#likert-design tr').forEach((tr,i) => {
+    const r = tr.querySelector('input:checked');
+    const label = tr.querySelector('td:first-child').textContent.trim();
+    data.design_knowledge[label] = r ? r.value : '';
+  });
+  data.material_considerations = checks('mat_consider');
+  data.material_challenges = checks('challenge');
+  data.material_wants = checks('material_want');
+  // Page 6 — Likert + radios + checks
+  data.topic_interest = {};
+  document.querySelectorAll('#likert-topics tr').forEach((tr,i) => {
+    const r = tr.querySelector('input:checked');
+    const label = tr.querySelector('td:first-child').textContent.trim();
+    data.topic_interest[label] = r ? r.value : '';
+  });
+  data.theory_practice_balance = radio('balance');
+  data.preferred_takeaway = checks('takeaway');
+  // Page 7
+  data.specific_topic = $('q-specific-topic').value.trim();
+  data.teaching_challenge = $('q-teaching-challenge').value.trim();
+  data.anything_else = $('q-anything-else').value.trim();
+  data.device = radio('device');
+  data.timestamp = new Date().toISOString();
+
+  return data;
+}
+
+// ── SUBMIT ──
+async function submitSurvey() {
+  // Basic validation on required fields
+  const device = radio('device');
+  if (!device) { alert('Please select your device (Q32) before submitting.'); return; }
+
+  $('submittingOverlay').classList.add('show');
+
+  try {
+    const payload = collectAll();
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    console.warn('Submit note:', err);
+  }
+
+  $('submittingOverlay').classList.remove('show');
+  $(`p-${currentPage}`).classList.remove('active');
+  $('p-success').classList.add('active');
+  $('progFill').style.width = '100%';
+  $('progLabel').textContent = '✓ Complete';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── INIT ──
+$('progFill').style.width = ((1 / TOTAL_PAGES) * 100) + '%';
+</script>
+</body>
+</html>
